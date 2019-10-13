@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre&display=swap');
+*{
+	font-family: 'Raleway', sans-serif;
+}
+.container{
+	display:flex;
+	flex-direction: column;
+	align-content:flex-start;
+	font-family: 'Raleway', sans-serif;
+}
+/*New code*/
+.container .selection-area{
+	width:100%;
+	min-height:40px;
+	max-height:50%;
+}
+/*New select code*/
+.container .select {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.container .select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  background: #e6e6e6;
+  color: #7b7b7b;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+	text-align: left;
+}
+.select select::-ms-expand {
+  display: none;
+}
+.select select:hover,
+.select select:focus {
+  color: #000;
+  background: #ccc;
+}
+.select select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.select__arrow {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #7b7b7b transparent transparent transparent;
+}
+.select select:hover ~ .select__arrow,
+.select select:focus ~ .select__arrow {
+  border-top-color: #000;
+}
+.select select:disabled ~ .select__arrow {
+  border-top-color: #ccc;
+}
+
+
+
+.container .checkbox-area{
+	min-height: 50px;
+	max-height: 40%;
+}
+.container .buttons{
+	min-height: 40px;
+	max-height:10%;
+}
+.container .buttons .btn-container{
+	display: inline-flex;
+	width:100%;
+}
+.container .buttons .btn-container .sec{
+	width:49%;
+	border-style: none;
+	padding:10px 15px;
+	font-size:.9rem;
+	background: #e6e6e6;
+	color: darkgray;
+	cursor: pointer;
+	background:#5a767a;
+	color:white;
+	font-weight:600;
+	border-radius: 3px;
+}
+.container .buttons .btn-container .sec.apply{
+	background:#5a767a;
+	color:white;
+}
+.container .buttons .btn-container .sec.reset{
+	background:darkgray;
+	color:white;
+}
+
+.container .buttons .btn-container .btwn{
+	width:2%;
+}
+/*Price select code*/
+.container .double{
+	display:inline-flex;
+	width:100%;
+}
+.container .double .select.min{
+	width:45%;
+}
+.container .double .txt{
+	width: 10%;
+	position: relative;
+}
+
+.container .double .txt span{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	font-size:.8rem;
+	color: #7b7b7b;
+}
+/*New Checkbox code*/
+.checkbox-item{
+	display: inline-flex;
+	width: 100%;
+	justify-content: start;
+	position:relative;
+	font-size: .9rem;
+	color: #7b7b7b;
+}
+.checkbox-item label{
+	position: absolute;
+	top: 7px;
+}
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.checkbox-item input {
+	position: absolute;
+  /* z-index: -1; */
+  opacity: 1;
+}
+.control__indicator {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+.control--checkbox .control__indicator {
+  border-radius: 0px;
+}
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+.checkbox-item:hover input:not([disabled]) ~ .control__indicator,
+.checkbox-item input:focus ~ .control__indicator {
+  border-color: #666;
+}
+.checkbox-item input:checked ~ .control__indicator {
+  background: black;
+}
+.checkbox-item input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.checkbox-item input:checked ~ .control__indicator:after {
+  display: block;
+}
+.checkbox-item .control__indicator:after {
+	left: 5px;
+  top: 0px;
+  width: 5px;
+  height: 12px;
+  border: solid #34bb92;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+.checkbox-item .control__indicator:after {
+  left: 5px;
+  top: 5px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #34bb92;
+}
+.control--radio input:disabled ~ .control__indicator:after {
+  background: #7b7b7b;
+}
+
+/*Old code*/
+/* .container .area{
+	display: inline-flex;
+	align-content: center;
+	width:100%;
+	margin-bottom: 15px;
+}
+.container .title-container {
+	display: inline-block;
+	width: 20%;
+	padding: 10px 15px;
+	font-size: .8rem;
+}
+.container .select{
+	position:static;
+	width:100%;
+}
+.container .title-container .title{
+	padding:10px;
+	text-align: center;
+	vertical-align: middle;
+}
+.container .select-container{
+	width:80%;
+}
+.container .area:last-child{
+	display:grid;
+	padding:10px;
+	width: 100%;
+	height:100%;
+}
+.container .area:last-child .title-container:last-child{
+	width:100%;
+	margin-left:8px;
+}
+.container .row{
+	width:100%;
+}
+.container .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container .container .title{
+  margin:10px;
+	font-size:.9rem;
+}
+#filer .area:last-child .checkbox{
+	display:block;
+	width:100%;
+}
+.container .area:last-child .checkbox input[type="checkbox"]{
+	opacity: 0;
+}
+.container .area:last-child .checkbox label{
+	font-family: sans-serif;
+	font-size: .8rem;
+}
+.container .area:last-child .checkbox label::after{
+	content:"";
+	display:inline-block;
+	height:16px;
+	width:16px;
+	border-radius:3px;
+	background: #ccc;
+	margin-left: 5px;
+	float:right;
+}
+.container .btns{
+	display:inline-flex;
+	justify-content: space-between;
+	width:100%;
+}
+.container .btn{
+	border-style: none;
+	border-radius:px;
+	background: #ccc;
+	padding:10px;
+	border-radius:3px;
+	width:48%;
+}
+.container .space{
+	width:4%;
+} */
+@media only screen and (max-width: 1090px) {
+	
+}

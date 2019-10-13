@@ -1,0 +1,40 @@
+
+header{
+  display:table;
+  background: white;
+  border: 1px solid #ccc;
+  width:100%;
+}
+header a{
+  color: black;
+}
+header .tr{
+  display: table-row;
+}
+header .td{
+  display: table-cell;
+  width: 33%;
+}
+.td.first{
+  font-size: 1.4rem;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Permanent Marker', serif;
+  letter-spacing: 5px;
+}
+.td.first span{
+  position: absolute;
+  top: 15px;
+}
+.td.center{
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Permanent Marker', serif;
+  letter-spacing: 5px;
+}
+.td.last a{
+  float:right;
+}
+.td.last .login{
+  margin-left: 10px;
+}

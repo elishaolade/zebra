@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre&display=swap');
+.map-content-container{
+  width:100%;
+  background: black;
+
+}
+.marker-container{
+  font-family: 'Averia Serif Libre', cursive;
+  position: absolute;
+  background: white;
+  padding:15px 12px;
+  border: 2px solid #5a767a;
+  font-size:.95rem;
+  font-weight: 400;
+  color:#5a767a;
+  border-radius: 5px;
+  transition: all .3s ease-in-out;
+  letter-spacing: 1px;
+}
+.marker-container span:hover{
+  /* font-weight: 600; */
+}
+.marker-container:hover{
+  position: absolute;
+  z-index: 500;
+  background: #5a767a;
+  border: 2px solid white;
+  color:white;
+  /* font-weight: 600; */
+}
+.marker-container.active{
+  position: absolute;
+  z-index: 500;
+  background: #5a767a;
+  border: 2px solid white;
+  color:white;
+}

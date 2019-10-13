@@ -3,8 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-google-maps/api": "^1.7.7",
+    "google-map-react": "^1.1.5",
+    "jquery": "^3.4.1",
+    "loadjs": "^4.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-google-maps": "^9.4.5",
+    "react-load-script": "0.0.6",
     "react-scripts": "3.1.2"
   },
   "scripts": {
@@ -27,5 +33,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "url-loader": "^2.1.0"
   }
 }
